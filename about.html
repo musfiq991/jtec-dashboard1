@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="'light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JTEC</title>
+    <link rel="stylesheet" href="style/style.css">
+      <link rel="shortcut icon" href="photo/logo.png" type="image/x-icon">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- DaisyUi and tailwindcss cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+   <style>
+    .font-poppins{
+        font-family: "Poppins", sans-serif;}
+   </style>
+   <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'bike-primary': '#E76F51',
+            'bike-bg': 'rgba(231, 111, 81, 0.1)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-screen">
+
+  <!-- Sticky Navbar -->
+  <!-- Sticky Navbar -->
+  <div class="navbar bg-base-100 shadow-md px-4 sticky top-0 z-50">
+    <!-- Left: Logo -->
+    <div class="flex-1">
+      <a class="text-xl font-bold">JTEC</a>
+    </div>
+
+    <!-- Right: Theme Toggle & Menu -->
+    <div class="flex-none gap-2">
+      <!-- Dark Mode Toggle -->
+      <label class="cursor-pointer flex items-center gap-2">
+        <input type="checkbox" class="toggle theme-controller" id="theme-toggle" />
+        <span class="text-sm hidden md:inline">Dark Mode</span>
+      </label>
+
+      <!-- Mobile Hamburger Menu -->
+      <div class="dropdown dropdown-end">
+        <label tabindex="0" class="btn btn-ghost btn-circle md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a href="dashboard.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Desktop Menu -->
+      <ul class="menu menu-horizontal px-1 hidden md:flex">
+        <li><a href="dashboard.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+       
+         <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- Page Content -->
+<section class="jtec-section">
+  <div class="jtec-container">
+    <h2 class="jtec-title">Jhenaidah Textile Engineering College (JTEC)</h2>
+    <p class="jtec-description">
+      Jhenaidah Textile Engineering College (JTEC) is a prominent public engineering college in Bangladesh affiliated with Bangladesh University of Textiles (BUTEX). The college offers specialized education in textile technology to meet the demands of Bangladesh's largest export industry — garments and textiles.
+    </p>
+
+    <div class="jtec-features">
+      <div class="jtec-column">
+        <h3>📘 Academic Programs</h3>
+        <ul>
+          <li>B.Sc. in Textile Engineering</li>
+          <li>Specializations: Yarn, Fabric, Wet Processing, Garments</li>
+          <li>4-year program under BUTEX</li>
+        </ul>
+      </div>
+
+      <div class="jtec-column">
+        <h3>🏫 Facilities & Highlights</h3>
+        <ul>
+          <li>Modern laboratories</li>
+          <li>Skilled academic staff</li>
+          <li>Library, IT Lab, and Workshops</li>
+          <li>Industry partnerships & internships</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="jtec-footer">
+      📍 Location: Jhenaidah, Khulna Division, Bangladesh
+    </div>
+  </div>
+</section>
+
+
+   
+
+  <!-- Dark Mode Script -->
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('change', function () {
+      document.documentElement.setAttribute('data-theme', this.checked ? 'dark' : 'light');
+    });
+  </script>
+
+</body>
+
+
+</html>

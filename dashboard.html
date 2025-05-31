@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="'light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JTEC</title>
+    <link rel="stylesheet" href="style/style.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <link rel="shortcut icon" href="photo/logo.png" type="image/x-icon">
+    <!-- DaisyUi and tailwindcss cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+   <style>
+    .font-poppins{
+        font-family: "Poppins", sans-serif;}
+   </style>
+   <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'bike-primary': '#E76F51',
+            'bike-bg': 'rgba(231, 111, 81, 0.1)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-screen">
+
+  <!-- Sticky Navbar -->
+  <div class="navbar bg-base-100 shadow-md px-4 sticky top-0 z-50">
+    <!-- Left: Logo -->
+    <div class="flex-1">
+      <a class="text-xl font-bold">JTEC</a>
+    </div>
+
+    <!-- Right: Theme Toggle & Menu -->
+    <div class="flex-none gap-2">
+      <!-- Dark Mode Toggle -->
+      <label class="cursor-pointer flex items-center gap-2">
+        <input type="checkbox" class="toggle theme-controller" id="theme-toggle" />
+        <span class="text-sm hidden md:inline">Dark Mode</span>
+      </label>
+
+      <!-- Mobile Hamburger Menu -->
+      <div class="dropdown dropdown-end">
+        <label tabindex="0" class="btn btn-ghost btn-circle md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a href="dashboard.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Desktop Menu -->
+      <ul class="menu menu-horizontal px-1 hidden md:flex">
+        <li><a href="dashboard.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+       
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+<!-- ..............Hero section............. -->
+ <div
+  class="hero min-h-screen"
+  style="background-image: url('photo/bg.jpg');"
+>
+  <div class="hero-overlay"></div>
+  <div class="hero-content text-neutral-content text-center">
+    <div class="max-w-md">
+      <h1 class="mb-5 text-5xl font-bold">Jhenaidah Textile Engineering collage</h1>
+      <p class="mb-5">
+       Where students gain hands-on experience through labs, workshops, and internships that enhance their practical skills. The textile industry is constantly evolving with innovations in sustainability and smart textiles, 
+      </p>
+      
+    </div>
+  </div>
+</div>
+
+  <!-- Page Content -->
+  <section id="interactive-section" class="py-10 px-4 bg-pink-50">
+  <div class="max-w-7xl mx-auto space-y-10">
+
+    <!-- 1–7 + Calculator + Joke -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Boxes 1–7 -->
+      <a href="https://drive.google.com/drive/folders/1g65JqMFy1EMIxZvFxcpcahgNQzStGiHO" class="interactive-link">
+        <span class="text-4xl mb-2">📓</span>
+        <span>Notes</span>
+      </a>
+      <a href="https://drive.google.com/drive/folders/1DPa9RC4s62vyGFQh3lfDUdlL69OJT1T5" class="interactive-link">
+        <span class="text-4xl mb-2">🧪</span>
+        <span>Lab Reports</span>
+      </a>
+      <a href="https://drive.google.com/drive/folders/1_w1R5ZdNI_-n2kuIUT-5nA0URVgpGXoj" class="interactive-link">
+        <span class="text-4xl mb-2">📚</span>
+        <span>Que-Bank</span>
+      </a>
+      <a href="photo/rafi.jpg" class="interactive-link">
+        <span class="text-4xl mb-2">📝</span>
+        <span>Syllabus</span>
+      </a>
+      <a href="https://www.butex.edu.bd/affiliated-colleges/" class="interactive-link">
+        <span class="text-4xl mb-2">🎓</span>
+        <span>Notice</span>
+      </a>
+      <a href="#" class="interactive-link">
+        <span class="text-4xl mb-2">📤</span>
+        <span>Submit Notes</span>
+      </a>
+      <a href="#" class="interactive-link">
+        <span class="text-4xl mb-2">💡</span>
+        <span>Free Classes</span>
+      </a>
+
+      <!-- Count Calculator -->
+      <div class="interactive-box flex-col text-center space-y-3">
+        <div class="text-sm font-bold text-blue-900">🧮 Count Calculator</div>
+        <div class="flex gap-2 flex-wrap justify-center">
+          <select id="fromType" onchange="updateUnits()" class="select select-sm select-bordered w-28">
+            <option value="direct">Direct</option>
+            <option value="indirect">Indirect</option>
+          </select>
+          <select id="fromUnit" class="select select-sm select-bordered w-28"></select>
+          <input id="unitValue" type="number" class="input input-sm input-bordered w-24" placeholder="Value" />
+          <select id="toUnit" class="select select-sm select-bordered w-28"></select>
+        </div>
+        <button onclick="convertCount()" class="btn btn-sm btn-primary">Convert</button>
+        <p id="convertedValue" class="text-sm text-green-700 font-medium mt-1"></p>
+      </div>
+
+      <!-- Jokes Section -->
+      <div onclick="getJoke()" class="interactive-box flex-col cursor-pointer bg-gray-100 hover:bg-gray-200 text-center transition duration-300 rounded-xl">
+        <span class="text-lg font-bold text-gray-800 mb-2">😂 Textile Joke</span>
+        <p id="jokeBox" class="text-sm text-gray-700 italic px-2">Click me for a yarn!</p>
+      </div>
+    </div>
+
+    <!-- Phonebook -->
+    <div class="text-center">
+      <h3 class="text-lg font-semibold mb-3 text-blue-900">📖 Phonebook</h3>
+      <div class="max-w-md mx-auto">
+        <input type="text" placeholder="Search by name..." oninput="searchPhonebook(this.value)" class="input input-bordered input-md w-full mb-3" />
+        <div id="phoneResults" class="text-sm space-y-2 text-left text-blue-900"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Styles -->
+<style>
+  .interactive-link {
+    @apply bg-white hover:bg-blue-100 text-blue-700 font-semibold text-center text-lg py-5 px-4 flex flex-col items-center justify-center rounded transition duration-300;
+  }
+  .interactive-box {
+    @apply bg-white rounded p-4 flex items-center justify-center min-h-[160px];
+  }
+  @media (max-width: 640px) {
+    .interactive-link {
+      @apply text-base py-4;
+    }
+    .interactive-box {
+      @apply min-h-[130px];
+    }
+  }
+</style>
+
+<!-- Script -->
+<script>
+  const units = {
+    direct: ["Tex", "Denier", "Decitex", "Militex", "Kilotex"],
+    indirect: ["Ne", "Nm", "Yarn Sw", "Dewburry", "Nek"],
+  };
+
+  const conversionTable = {
+    // basic example values for demonstration
+    Tex: { to: val => 590 / val, from: val => 590 / val },
+    Denier: { to: val => 5315 / val, from: val => 5315 / val },
+    Decitex: { to: val => 5900 / val, from: val => 5900 / val },
+    Militex: { to: val => 590000 / val, from: val => 590000 / val },
+    Kilotex: { to: val => 0.59 / val, from: val => 0.59 / val },
+    Ne: { to: val => val * 1.2, from: val => val / 1.2 },
+    Nm: { to: val => val * 1.7, from: val => val / 1.7 },
+    "Yarn Sw": { to: val => val * 2.3, from: val => val / 2.3 },
+    Dewburry: { to: val => val * 2.9, from: val => val / 2.9 },
+    Nek: { to: val => val * 1.9, from: val => val / 1.9 },
+  };
+
+  function updateUnits() {
+    const fromType = document.getElementById("fromType").value;
+    const toType = fromType === "direct" ? "indirect" : "direct";
+
+    const fromUnitSelect = document.getElementById("fromUnit");
+    const toUnitSelect = document.getElementById("toUnit");
+
+    fromUnitSelect.innerHTML = units[fromType].map(u => `<option value="${u}">${u}</option>`).join('');
+    toUnitSelect.innerHTML = units[toType].map(u => `<option value="${u}">${u}</option>`).join('');
+  }
+
+  function convertCount() {
+    const from = document.getElementById("fromUnit").value;
+    const to = document.getElementById("toUnit").value;
+    const val = parseFloat(document.getElementById("unitValue").value);
+    const fromType = document.getElementById("fromType").value;
+    const output = document.getElementById("convertedValue");
+
+    if (!from || !to || isNaN(val)) {
+      output.innerText = "Please enter a valid value and units.";
+      return;
+    }
+
+    // Simulate simple ratio conversion (extend as needed)
+    let base;
+    if (fromType === "direct") {
+      base = conversionTable[from].to(val);
+    } else {
+      base = conversionTable[from].from(val);
+    }
+
+    const result = base ? base.toFixed(2) : "N/A";
+    output.innerText = `${val} ${from} ≈ ${result} ${to}`;
+  }
+
+  updateUnits(); // init dropdowns on load
+
+  const jokes = [
+    "Why did the thread fail the exam? It couldn't follow the pattern!",
+    "What's a weaver’s favorite subject? Fabric-ation!",
+    "Don’t trust textile jokes — they tend to unravel quickly.",
+    "Knitting class was intense — they were hanging on every loop!",
+    "I dated a textile engineer... she had me in stitches!",
+  ];
+
+  function getJoke() {
+    const joke = jokes[Math.floor(Math.random() * jokes.length)];
+    document.getElementById("jokeBox").innerText = joke;
+  }
+
+  const phonebook = [
+  { name: "Musfiq", number: "+8801731-189579" },
+  { name: "Musfiq", number: "+8801791-975152" },
+  { name: "Shaidur Rahman Yeamin", number: "+8801300-651635" },
+  { name: "Tahsin Hossain Rafı", number: "+8801818-318700" },
+  { name: "Sirazul Islam", number: "+8801740-855230" },
+  { name: "Amir Hossain", number: "01315-800645" },
+  { name: "Bulbul Ahmed", number: "01753-927665" },
+  { name: "Eusha Ahmed", number: "01521-774360" },
+  { name: "Eusha Ahmed", number: "01867-785776" },
+  { name: "Farhan Ahmed", number: "+8801567-882667" },
+  { name: "Joynal Ahmed", number: "+8801995-047930" },
+  { name: "Mahmudul Hasan", number: "+8801750-232592" },
+  { name: "Muntasir Ahmed", number: "01740-496832" }
+];
+
+
+  function searchPhonebook(query) {
+  const resultContainer = document.getElementById('phoneResults');
+  resultContainer.innerHTML = ''; // Clear previous results
+
+  if (!query.trim()) return; // Don't show anything if query is empty
+
+  const results = phonebook
+    .filter(p => p.name.toLowerCase().includes(query.toLowerCase()))
+    .slice(0, 3); // Limit to 3 results
+
+  if (results.length === 0) {
+    resultContainer.innerHTML = `<p class="text-red-600 text-sm">No matches found.</p>`;
+    return;
+  }
+
+  resultContainer.innerHTML = results
+    .map(
+      p =>
+        `<div class="cursor-pointer hover:text-blue-600" onclick="makeCall('${p.number}')">${p.name}: <a href="tel:${p.number}" class="underline">${p.number}</a></div>`
+    )
+    .join('');
+}
+
+  function makeCall(number) {
+    window.location.href = `tel:${number}`;
+  }
+</script>
+
+
+   
+
+  <!-- Dark Mode Script -->
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('change', function () {
+      document.documentElement.setAttribute('data-theme', this.checked ? 'dark' : 'light');
+    });
+  </script>
+
+</body>
+
+
+</html>

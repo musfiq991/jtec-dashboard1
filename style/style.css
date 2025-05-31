@@ -1,0 +1,247 @@
+.logo{
+    font-size: 30px;
+    color: gray;
+}
+
+.about{
+    text-align: center;
+}
+/* JTEC Info Section Styles */
+.jtec-section {
+  background: linear-gradient(to right, #6366f1, #8b5cf6);
+  color: #fff;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.jtec-container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.jtec-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.jtec-description {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.jtec-features {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.jtec-column {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 450px;
+  text-align: left;
+}
+
+.jtec-column h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.jtec-column ul {
+  list-style: disc;
+  margin-left: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.jtec-footer {
+  margin-top: 30px;
+  font-style: italic;
+  font-size: 16px;
+}
+/* ..........dashboard */
+/* === Global Padding & Spacing === */
+body {
+  scroll-behavior: smooth;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  padding: 2rem; /* Add padding around the whole page */
+  box-sizing: border-box;
+}
+
+/* === Navbar Branding & Padding === */
+.navbar {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.navbar a.text-xl {
+  background: linear-gradient(to right, #6366f1, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* === Hero Section Enhancements with Padding === */
+.hero {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 6rem 2rem; /* More vertical padding for breathing space */
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+
+.hero-content h1 {
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+  animation: slideIn 1s ease-out;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+.hero-content p {
+  color: #f3f4f6;
+  font-weight: 300;
+  animation: fadeIn 2s ease-out;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+/* === Interactive Boxes Styling with More Padding & Margin === */
+.interactive-link {
+  background: #ffffffcc;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  padding: 2.5rem 1.5rem; /* Increased padding */
+  margin: 0.75rem 0;       /* Vertical margin for spacing */
+  font-size: 1.25rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.interactive-link:hover {
+  background: linear-gradient(145deg, #e0eaff, #ffffff);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Icon size bigger with margin */
+.interactive-link > span.text-4xl {
+  font-size: 3.5rem !important;
+  margin-bottom: 1rem;
+}
+
+.interactive-box {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  padding: 2rem; /* More padding inside boxes */
+  margin: 1rem 0;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.interactive-box:hover {
+  transform: scale(1.05);
+}
+
+/* === Buttons: Larger & more padding === */
+.btn-primary {
+  background: linear-gradient(to right, #6366f1, #8b5cf6);
+  border: none;
+  color: #fff;
+  padding: 0.75rem 2.5rem;
+  font-weight: 600;
+  font-size: 1.15rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  transform: scale(1.07);
+  box-shadow: 0 10px 24px rgba(99, 102, 241, 0.5);
+}
+
+/* === Joke Box Padding & Font-size === */
+#jokeBox {
+  transition: all 0.3s ease;
+  padding: 1.2rem 1rem;
+  font-size: 1.1rem;
+}
+
+#jokeBox:hover {
+  color: #111827;
+  cursor: pointer;
+}
+
+/* === Phonebook Search Result Enhanced Spacing === */
+#phoneResults div {
+  padding: 0.75rem 0;
+  border-bottom: 1px dashed #e5e7eb;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+#phoneResults div:hover {
+  background-color: #f0f4ff;
+  padding-left: 0.5rem;
+}
+
+/* === Responsive Font Scaling & Padding on small devices === */
+@media (max-width: 640px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .interactive-link {
+    padding: 2rem 1rem;
+    font-size: 1.1rem;
+  }
+
+  .interactive-box {
+    min-height: 150px;
+    padding: 1.5rem;
+  }
+
+  .btn-primary {
+    padding: 0.6rem 2rem;
+    font-size: 1rem;
+  }
+}
+  /* contact info */
+  .icon-hover:hover {
+  color: #E76F51; /* bike-primary color */
+  transform: scale(1.2);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
