@@ -8,7 +8,7 @@
 }
 /* JTEC Info Section Styles */
 .jtec-section {
-  background: linear-gradient(to right, #6366f1, #8b5cf6);
+  background: linear-gradient(to right, #6a6b92, #8b5cf6);
   color: #fff;
   padding: 60px 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -244,4 +244,4 @@ body {
 .font-poppins {
   font-family: 'Poppins', sans-serif;
 }
-
+.menu>li{font-weight:bold ;}
